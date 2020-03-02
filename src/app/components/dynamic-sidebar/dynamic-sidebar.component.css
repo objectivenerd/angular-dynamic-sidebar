@@ -1,0 +1,77 @@
+button:focus {
+    outline: none;
+}
+
+.sidebar-component {
+
+}
+
+.show-sidebar-button-container {
+
+}
+
+.show-sidebar-button-row-container {
+    padding: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.show-sidebar-button-column-container {
+    text-align: right;
+}
+
+.show-sidebar-button {
+    border: 1px solid #fd7e14;
+    height: 1.7em;
+    width: 1.7em;
+    border-radius: 50%;
+}
+
+.show-sidebar-button-content {
+    color: #fd7e14;
+    margin-top: -1px;
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #2196f3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index:1000;
+    opacity: 1;
+    overflow-y: auto;
+    margin-top: 2.9em;
+    margin-right: 0px;
+    box-shadow: 0 0 2.5em rgba(85,85,85,0.7);
+}
+
+.close-sidebar-button-container {
+    
+}
+
+.close-sidebar-button-row-container {
+    margin-top:10px;
+    padding-left: 0.5em;
+}
+
+.close-sidebar-button-column-container {
+    text-align: left;
+    margin-top: 0.4em;
+}
+
+.close-sidebar-button {
+    border: none;
+    height: 1.7em;
+    width: 1.7em;
+    border-radius: 50%;
+}
+
+.close-sidebar-button-content {
+    color: #fd7e14;
+    margin-top: -1px;
+}
+
+.sidebar-content {
+    padding: 1em;
+}

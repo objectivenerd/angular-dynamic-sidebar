@@ -1,1 +1,3 @@
-# angular-dynamic-sidebar
+# AngularDynamicSidebar
+
+

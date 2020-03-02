@@ -1,0 +1,56 @@
+<!-- sidebar component -->
+<div class="sidebar-component">
+
+    <!-- show sidebar button container -->
+    <div *ngIf="canViewSidebar" class="show-sidebar-button-container">
+        <!-- show sidebar button row container -->
+        <div class="row" class="show-sidebar-button-row-container">
+            <!-- show sidebar button column container -->
+            <div class="col" class="show-sidebar-button-column-container">
+                <!-- show sidebar button -->
+                <button class="show-sidebar-button" (click)="showSidebar()">
+                    <span class="show-sidebar-button-content">
+                        <i class="{{showSidebarButtonIcon}}"></i>
+                        {{showSidebarButtonText}}
+                    </span>
+                </button><!-- /.show sidebar button -->
+            </div><!-- /.show sidebar button column container -->
+        </div><!-- /.show sidebar button row container -->
+    </div><!-- /.show sidebar button container -->
+
+    <!-- sidebar -->
+    <div *ngIf="show" class="sidebar">
+
+        <!-- close sidebar button container -->
+        <div class="close-sidebar-button-container">
+            <!-- close sidebar button row container -->
+            <div class="row" class="close-sidebar-button-row-container">
+                <!-- close sidebar button column container -->
+                <div class="col" class="close-sidebar-button-column-container">
+                    <!-- close sidebar button -->
+                    <button class="close-sidebar-button" (click)="closeSidebar()">
+                        <span class="close-sidebar-button-content">
+                            <i class="{{closeSidebarButtonIcon}}"></i>
+                            {{closeSidebarButtonText}}
+                        </span>
+                    </button><!-- /.close sidebar button -->
+                </div><!-- /.close sidebar button column container -->
+            </div><!-- /.close sidebar button row container -->
+        </div><!-- /.close sidebar button container -->
+
+        <!-- sidebar content -->
+        <div class="sidebar-content">
+            <!-- sidebar component content from ngFor -->
+            <div *ngFor="let component of components">
+                <!-- ng-dynamic-component -->
+                <ndc-dynamic
+                    [ndcDynamicComponent]="component.component"
+                    [ndcDynamicInputs]="component.inputs"
+                    [ndcDynamicOutputs]="component.outputs">
+                </ndc-dynamic><!-- /.ng-dynamic-component -->
+            </div><!-- /.sidebar component content from ngFor -->
+        </div><!-- /.sidebar content -->
+
+    </div><!-- /.sidebar -->
+
+</div><!-- /.sidebar component -->
